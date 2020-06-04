@@ -8,6 +8,35 @@
     android:background="?attr/colorPrimary"
     android:theme="@style/ThemeOverlay.AppCompat.Light"
     android:elevation="4dp"
-    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+    app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/ivCvProduct"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/muiscaco" />
+
+        <TextView
+            android:id="@+id/tvDescriptionProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Muisca.co"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/negro"/>
+
+    </LinearLayout>
 </androidx.appcompat.widget.Toolbar>

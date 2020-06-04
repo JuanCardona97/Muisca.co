@@ -3,7 +3,7 @@ package com.example.muiscaco;
 public class Modulos {
     String title;
     String description;
-    int idResource;
+    public int idResource;
 
     public Modulos(String title, String description, int idResource){
         this.title=title;
