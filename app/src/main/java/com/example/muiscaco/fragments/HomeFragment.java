@@ -1,6 +1,5 @@
 package com.example.muiscaco.fragments;
 
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,9 +9,9 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.muiscaco.adapters.AdapterModulo;
 import com.example.muiscaco.Modulos;
 import com.example.muiscaco.R;
+import com.example.muiscaco.adapters.AdapterModulo;
 
 import java.util.ArrayList;
 
@@ -60,10 +59,10 @@ public class HomeFragment extends Fragment {
     }
 
     private void llenarDataSet(){
-        dataSetProducts.add(new Modulos("Mitos","Las diferentes mitologias de la cultura Muisca", R.drawable.mitos));
-        dataSetProducts.add(new Modulos("Ubicación","Las diferentes partes donde se ubicaban", R.drawable.ubicacion));
-        dataSetProducts.add(new Modulos("Lagunas","Las diferentes lagunas sagradas", R.drawable.lagunas));
-        dataSetProducts.add(new Modulos("Costumbres","Las diferentes costumbres", R.drawable.costumbres));
+        dataSetProducts.add(new Modulos("Mitos","Mitologias de la cultura", R.drawable.mitos));
+        dataSetProducts.add(new Modulos("Ubicación","Partes donde se ubicaban", R.drawable.ubicacion));
+        dataSetProducts.add(new Modulos("Lagunas","Lagunas sagradas", R.drawable.lagunas));
+        dataSetProducts.add(new Modulos("Costumbres","Diferentes costumbres", R.drawable.costumbres));
     }
 
 }
