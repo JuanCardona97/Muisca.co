@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 intent = new Intent(this,AlterActivity.class);
                 break;
             case R.id.subitem2:
-                intent = new Intent(this,AlterActivity.class);
+
                 break;
                 default:
                     fragment = new HomeFragment();
