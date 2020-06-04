@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment;
 
 import com.example.muiscaco.R;
 
-
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -26,7 +25,7 @@ public class MitosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_blank_fragment2, container, false);
+        return inflater.inflate(R.layout.fragment_mitos, container, false);
     }
 
 }

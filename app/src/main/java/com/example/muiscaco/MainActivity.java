@@ -1,6 +1,7 @@
 package com.example.muiscaco;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -51,6 +52,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         NavigationView navigationView = (NavigationView)findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setItemIconSize(80);
+        navigationView.setItemIconTintList(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
+        navigationView.setItemTextColor(ColorStateList.valueOf(getResources().getColor(R.color.colorAccent)));
 
         //navigationView.setItemIconTintList(null);
         //navigationView.setBackgroundColor(getResources().getColor(R.color.colorPrimary));

@@ -35,7 +35,7 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        View vista = inflater.inflate(R.layout.fragment_blank_fragment1, container, false);
+        View vista = inflater.inflate(R.layout.fragment_home, container, false);
 
         recyclerView = (RecyclerView)vista.findViewById(R.id.rvModulos);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
