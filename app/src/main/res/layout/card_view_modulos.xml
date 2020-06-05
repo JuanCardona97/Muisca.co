@@ -62,7 +62,8 @@
                 android:text="Lattle"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:textColor="@color/negro"/>
+                android:textColor="@color/negro"
+                android:fontFamily="casual"/>
 
             <TextView
                 android:id="@+id/tvDescriptionProduct"
@@ -73,6 +74,7 @@
                 android:text="Lattlejjsjsjjsjsjsjsjsjshhhhhhhhhhhhhhhhhhhhh "
                 android:textSize="18dp"
                 android:textStyle="italic"
+                android:fontFamily="casual"
                 android:textColor="@color/negro"/>
 
         </LinearLayout>
