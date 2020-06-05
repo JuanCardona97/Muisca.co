@@ -1,5 +1,7 @@
 package com.example.muiscaco.adapters;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,9 +14,13 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.muiscaco.AlterActivity;
 import com.example.muiscaco.Modulos;
 import com.example.muiscaco.R;
+import com.example.muiscaco.fragments.CostumbresFragment;
+import com.example.muiscaco.fragments.DiosesFragment;
 import com.example.muiscaco.fragments.HomeFragment;
+import com.example.muiscaco.fragments.LagunasFragment;
 import com.example.muiscaco.fragments.MitosFragment;
 import com.example.muiscaco.fragments.UbicacionFragment;
 
@@ -23,12 +29,14 @@ import java.util.ArrayList;
 public class AdapterModulo extends RecyclerView.Adapter<AdapterModulo.ViewHolderCVModulo>  {
 
     private ArrayList<Modulos> dataSet;
+    private Context contexto;
 
 
 
 
-    public AdapterModulo(ArrayList<Modulos> datos){
+    public AdapterModulo(ArrayList<Modulos> datos, Context c){
         dataSet=datos;
+        contexto=c;
 
     }
 
@@ -37,6 +45,7 @@ public class AdapterModulo extends RecyclerView.Adapter<AdapterModulo.ViewHolder
     public ViewHolderCVModulo onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_view_modulos,parent,false);
+        contexto=v.getContext();
 
 
 
@@ -57,19 +66,29 @@ public class AdapterModulo extends RecyclerView.Adapter<AdapterModulo.ViewHolder
             public void onClick(View v) {
                 AppCompatActivity activity = (AppCompatActivity)v.getContext();
                 Fragment fragment = null;
+                Intent intent;
+
 
                 switch (position){
                     case 0:
                         fragment = new MitosFragment();
                         break;
                     case 1:
-                        fragment = new UbicacionFragment();
+                        fragment = new DiosesFragment();
                         break;
                     case 2:
                         fragment = new UbicacionFragment();
                         break;
                     case 3:
-                        fragment = new UbicacionFragment();
+                        fragment = new LagunasFragment();
+                        break;
+                    case 4:
+                        fragment = new CostumbresFragment();
+                        break;
+                    case 5:
+
+                        intent = new Intent(contexto, AlterActivity.class);
+                        contexto.startActivity(intent);
                         break;
 
                     default:

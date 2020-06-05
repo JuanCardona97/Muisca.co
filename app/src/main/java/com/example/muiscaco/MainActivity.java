@@ -16,7 +16,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.muiscaco.fragments.CostumbresFragment;
+import com.example.muiscaco.fragments.DiosesFragment;
 import com.example.muiscaco.fragments.HomeFragment;
+import com.example.muiscaco.fragments.LagunasFragment;
 import com.example.muiscaco.fragments.MitosFragment;
 import com.example.muiscaco.fragments.UbicacionFragment;
 import com.google.android.material.navigation.NavigationView;
@@ -72,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         recyclerView.setAdapter(new AdapterModulo(dataSetProducts));*/
 
+
         HomeFragment homeFragment = new HomeFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.flFrameLayout, homeFragment).commit();
 
@@ -100,14 +104,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 fragment = new MitosFragment();
                 break;
             case R.id.item3:
+                fragment = new DiosesFragment();
+                break;
+            case R.id.item4:
                 fragment = new UbicacionFragment();
-                break;
-            case R.id.subitem1:
-                intent = new Intent(this,AlterActivity.class);
-                break;
-            case R.id.subitem2:
 
                 break;
+            case R.id.item5:
+                fragment = new LagunasFragment();
+                //lagunas
+                break;
+
+            case R.id.item6:
+                //costumbres
+                fragment = new CostumbresFragment();
+                break;
+            case R.id.item7:
+                intent = new Intent(this,AlterActivity.class);
+                break;
+
+
                 default:
                     fragment = new HomeFragment();
                     break;

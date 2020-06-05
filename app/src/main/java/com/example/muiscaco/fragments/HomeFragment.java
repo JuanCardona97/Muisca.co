@@ -25,6 +25,7 @@ public class HomeFragment extends Fragment {
     private RecyclerView recyclerView;
 
 
+
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -35,6 +36,7 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
+
         View vista = inflater.inflate(R.layout.fragment_home, container, false);
 
         recyclerView = (RecyclerView)vista.findViewById(R.id.rvModulos);
@@ -42,10 +44,13 @@ public class HomeFragment extends Fragment {
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(linearLayoutManager);
 
+
         dataSetProducts = new ArrayList<Modulos>();
         llenarDataSet();
 
-        AdapterModulo adapterModulo = new AdapterModulo(dataSetProducts);
+
+
+        AdapterModulo adapterModulo = new AdapterModulo(dataSetProducts, inflater.getContext());
 
 
 
@@ -59,10 +64,15 @@ public class HomeFragment extends Fragment {
     }
 
     private void llenarDataSet(){
-        dataSetProducts.add(new Modulos("Mitos","Mitologias de la cultura", R.drawable.mitos));
+
+
+
+        dataSetProducts.add(new Modulos("Mitos","Mitologias de la cultura", R.drawable.mitologia));
+        dataSetProducts.add(new Modulos("Deidades","Diferentes dioses", R.drawable.mitos));
         dataSetProducts.add(new Modulos("Ubicación","Partes donde se ubicaban", R.drawable.ubicacion));
         dataSetProducts.add(new Modulos("Lagunas","Lagunas sagradas", R.drawable.lagunas));
         dataSetProducts.add(new Modulos("Costumbres","Diferentes costumbres", R.drawable.costumbres));
+        dataSetProducts.add(new Modulos("Quiz","Juego de preguntas", R.drawable.juegos));
     }
 
 }
