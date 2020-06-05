@@ -48,6 +48,19 @@ public class UtilitiesDataBase {
         static  final   String CONSULTAR_ALL_TABLE="SELECT * FROM "+TABLE_NAMEL;
     }
 
+    public class TablaCostumbre{
+        static  final  String TABLE_NAMEC="costumbre";
+        static  final  String ID="id";
+        static  final  String TITLE="title";
+        static  final  String DESCRIPTION="description";
+        static  final  String IMAGE="image";
+
+        static final String CREATE_TABLE_COSTUMBRE="CREATE TABLE "+ TABLE_NAMEC+ "( "+ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "+
+                TITLE+" TEXT, "+DESCRIPTION+" TEXT, "+IMAGE+" INTEGER)";
+
+
+        static  final   String CONSULTAR_ALL_TABLE="SELECT * FROM "+TABLE_NAMEC;
+    }
 
 
 

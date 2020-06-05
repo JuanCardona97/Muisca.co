@@ -67,12 +67,12 @@ public class HomeFragment extends Fragment {
 
 
 
-        dataSetProducts.add(new Modulos("Mitos","Mitologias de la cultura", R.drawable.mitologia));
-        dataSetProducts.add(new Modulos("Deidades","Diferentes dioses", R.drawable.mitos));
-        dataSetProducts.add(new Modulos("Ubicación","Partes donde se ubicaban", R.drawable.ubicacion));
-        dataSetProducts.add(new Modulos("Lagunas","Lagunas sagradas", R.drawable.lagunas));
-        dataSetProducts.add(new Modulos("Costumbres","Diferentes costumbres", R.drawable.costumbres));
-        dataSetProducts.add(new Modulos("Quiz","Juego de preguntas", R.drawable.juegos));
+        dataSetProducts.add(new Modulos("Mitos","Mitologias de la cultura.", R.drawable.mitologia));
+        dataSetProducts.add(new Modulos("Deidades","Diferentes dioses de la cultura.", R.drawable.mitos));
+        dataSetProducts.add(new Modulos("Ubicación","Sitios turisticos y Lagunas.", R.drawable.ubicacion));
+        dataSetProducts.add(new Modulos("Lagunas","Lagunas sagradas de la cultura.", R.drawable.lagunas));
+        dataSetProducts.add(new Modulos("Costumbres","Diferentes costumbres.", R.drawable.costumbres));
+        dataSetProducts.add(new Modulos("Quiz","Juego de preguntas.", R.drawable.juegos));
     }
 
 }

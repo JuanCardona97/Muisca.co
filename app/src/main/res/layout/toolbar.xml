@@ -34,9 +34,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Muisca.co"
+            android:layout_marginTop="4dp"
             android:textSize="30sp"
             android:textStyle="bold"
-            android:textColor="@color/negro"/>
+            android:textColor="@color/negro"
+            android:fontFamily="casual"/>
 
     </LinearLayout>
 </androidx.appcompat.widget.Toolbar>

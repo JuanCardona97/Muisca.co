@@ -2,6 +2,7 @@ package com.example.muiscaco.fragments;
 
 
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,6 +66,7 @@ public class DiosesFragment extends Fragment{
         image = (ImageView)v.findViewById(R.id.ivImageD);
         before = (Button)v.findViewById(R.id.btnAnteriorD);
         next = (Button)v.findViewById(R.id.btnSiguienteD);
+        description.setMovementMethod(new ScrollingMovementMethod());
 
         //Mostrar la primera fila
         cambiarDios();
