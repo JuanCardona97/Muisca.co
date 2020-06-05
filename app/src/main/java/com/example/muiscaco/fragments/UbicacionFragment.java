@@ -63,7 +63,29 @@ View mView;
         map=googleMap;
         map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         LatLng MuseoArqueologico = new LatLng(5.709884, -72.924386);
+        LatLng LagunaGuatavita = new LatLng(4.977538, -73.774927);
+        LatLng LagunaSiecha = new LatLng(4.764049, -73.852574);
+        LatLng LagunaTeusaca = new LatLng(4.560838, -74.022378);
+        LatLng LagunaGuascama = new LatLng(2.282931, -78.399146);
+        LatLng LagunaUbaque = new LatLng(4.499870, -73.935120);
+        LatLng Cerro3 = new LatLng(5.032126, -73.776971);
+        LatLng CerroQ = new LatLng(4.328744, -74.497539);
+        LatLng Farallones = new LatLng(5.229584, -73.834603);
+
+
         map.addMarker(new MarkerOptions().position(MuseoArqueologico).title("Museo arqueologico muisca"));
-        map.moveCamera(CameraUpdateFactory.newLatLng(MuseoArqueologico));
+        map.addMarker(new MarkerOptions().position(LagunaGuatavita).title("Laguna de Guatavita"));
+        map.addMarker(new MarkerOptions().position(LagunaSiecha).title("Laguna de Siecha"));
+        map.addMarker(new MarkerOptions().position(LagunaTeusaca).title("Laguna de Teusacá"));
+        map.addMarker(new MarkerOptions().position(LagunaGuascama).title("Laguna de Guascama"));
+        map.addMarker(new MarkerOptions().position(LagunaUbaque).title("Laguna de Ubaque"));
+        map.addMarker(new MarkerOptions().position(Cerro3).title("Cerro sagrado las tres viejas"));
+        map.addMarker(new MarkerOptions().position(CerroQ).title("Cerro sagrado del Quininí"));
+        map.addMarker(new MarkerOptions().position(Farallones).title("Farallones de Sutatausa"));
+
+
+        float zoom = 5;
+
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(MuseoArqueologico, zoom));
     }
 }

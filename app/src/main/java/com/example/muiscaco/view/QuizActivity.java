@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,6 +23,7 @@ public class QuizActivity extends AppCompatActivity {
     private boolean mAnswer;
     private int mScore = 0;
     private int mQuestionNumber = 0;
+    private MediaPlayer gano, perdio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,9 @@ public class QuizActivity extends AppCompatActivity {
         mTrueButton = (Button)findViewById(R.id.trueButton);
         mFalseButton = (Button)findViewById(R.id.falseButton);
 
+        gano = MediaPlayer.create(this, R.raw.ganar);
+        perdio = MediaPlayer.create(this, R.raw.perder);
+
         updateQuestion();
 
         //Logic for true button
@@ -42,6 +47,7 @@ public class QuizActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(mAnswer == true) {
                     mScore++;
+                    gano.start();
                     updateScore(mScore);
 
                     //perform check before you update the question
@@ -65,6 +71,7 @@ public class QuizActivity extends AppCompatActivity {
                         QuizActivity.this.finish();
                         startActivity(i);
                     } else {
+                        perdio.start();
                         updateQuestion();
                     }
                 }
@@ -77,6 +84,7 @@ public class QuizActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(mAnswer == false) {
                     mScore++;
+                    gano.start();
                     updateScore(mScore);
 
                     //perform check before you update the question
@@ -100,6 +108,7 @@ public class QuizActivity extends AppCompatActivity {
                         QuizActivity.this.finish();
                         startActivity(i);
                     } else {
+                        perdio.start();
                         updateQuestion();
                     }
                 }
